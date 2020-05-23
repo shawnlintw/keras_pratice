@@ -85,13 +85,13 @@ model.compile(loss='categorical_crossentropy', optimizer='adam',
 		metrics=['accuracy'])
 try:
 	model.load_weights('cifar10CNNModel_2.h5')
-	train_history=model.fit(X_img_train_normalize, y_label_train_OneHot,
-		validation_split=0.2,
-		epochs=10,
-		batch_size=100,
-		verbose=1)
-	show_train_history('accuracy', 'val_accuracy')
-	show_train_history('loss','val_loss')
+#	train_history=model.fit(X_img_train_normalize, y_label_train_OneHot,
+#		validation_split=0.2,
+#		epochs=10,
+#		batch_size=100,
+#		verbose=1)
+#	show_train_history('accuracy', 'val_accuracy')
+#	show_train_history('loss','val_loss')
 except:
 	train_history=model.fit(X_img_train_normalize, y_label_train_OneHot,
 		validation_split=0.2,
