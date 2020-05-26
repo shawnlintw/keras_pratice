@@ -50,7 +50,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-
+*.npy
 # Translations
 *.mo
 *.pot
@@ -137,4 +137,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-03/dog_and_cat/
+03/dogs-vs-cats/
+03/dataset_dogs_vs_cats/
