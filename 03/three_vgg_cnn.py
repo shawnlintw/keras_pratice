@@ -18,6 +18,22 @@ def define_model():
 			input_shape=(200,200,3)
 			))
 	model.add(MaxPooling2D(2,2))
+	model.add(
+			Conv2D(64,
+			(3,3),
+			activation='relu',
+			kernel_initializer='he_uniform',
+			padding='same'
+			))
+	model.add(MaxPooling2D(2,2))
+	model.add(
+			Conv2D(128,
+			(3,3),
+			activation='relu',
+			kernel_initializer='he_uniform',
+			padding='same'
+			))
+	model.add(MaxPooling2D(2,2))
 	model.add(Flatten())
 	model.add(Dense(128, activation='relu', kernel_initializer='he_uniform'))
 	model.add(Dense(1,activation='sigmoid'))
@@ -40,7 +56,7 @@ def summarize_diagnostics(history):
 	plt.plot(history.history['val_accuracy'], color='orange', label='test')
 	# save plot to file
 	filename = sys.argv[0].split('/')[-1]
-	plt.savefig(filename + '_plot.png')
+	plt.savefig(filename + '__plot.png')
 	plt.close()
 
 # run the test harness for evaluating a model
