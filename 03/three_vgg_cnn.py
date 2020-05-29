@@ -5,7 +5,7 @@ from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten
 from keras.optimizers import SGD
 from keras.preprocessing.image import ImageDataGenerator
-
+from keras.utils import plot_model
 # define cnn model
 def define_model():
 	model=Sequential()
@@ -62,6 +62,7 @@ def summarize_diagnostics(history):
 # run the test harness for evaluating a model
 def run_test_harness():
 	model= define_model()
+	plot_model(model, show_shapes=True , to_file='three_vgg.png')
 	# create data generator
 	datagen = ImageDataGenerator(rescale=1.0/255.0)
 	# prepare iterators
