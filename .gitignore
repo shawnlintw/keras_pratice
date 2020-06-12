@@ -139,3 +139,7 @@ cython_debug/
 
 03/dogs-vs-cats/
 03/dataset_dogs_vs_cats/
+tmp/images
+tmp/src
+mskrcnn/
+*.h6

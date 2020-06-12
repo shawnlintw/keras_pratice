@@ -51,11 +51,11 @@ def run_test_harness():
 	# prepare iterators
 	train_it = datagen.flow_from_directory('dataset_dogs_vs_cats/train/',
 			class_mode='binary',
-			batch_size=64,
+			batch_size=2048,
 			target_size=(200,200))
 	test_it = datagen.flow_from_directory('dataset_dogs_vs_cats/test/',
 			class_mode='binary',
-			batch_size=64,
+			batch_size=2048,
 			target_size=(200,200))
 	# fit model
 	history = model.fit_generator(train_it, steps_per_epoch=len(train_it),
